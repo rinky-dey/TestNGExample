@@ -42,11 +42,13 @@ public class Dummy {
 	
 	@Test(priority = 2)
 	public void test2() {
+		
 		int i=20;
 		int j=100;
+		int sum = i+j;
 		System.out.println(i);
 		System.out.println(j);
-		System.out.println(i+j);
+		System.out.println(sum);
 		System.out.println("Test 2");
 	}
 	
