@@ -43,8 +43,9 @@ public class Dummy {
 	@Test(priority = 2)
 	public void test2() {
 		int i=20;
-		int j=1;
-		
+		int j=100;
+		System.out.println(i);
+		System.out.println(j);
 		System.out.println(i+j);
 		System.out.println("Test 2");
 	}
