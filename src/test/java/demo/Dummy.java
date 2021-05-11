@@ -42,7 +42,10 @@ public class Dummy {
 	
 	@Test(priority = 2)
 	public void test2() {
+		int i=20;
+		int j=1;
 		
+		System.out.println(i+j);
 		System.out.println("Test 2");
 	}
 	
