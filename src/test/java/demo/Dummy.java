@@ -54,6 +54,9 @@ public class Dummy {
 	
 	@AfterMethod
 	private void after_method() {
+		
+		int i =80;
+		System.out.println(i);
 		System.out.println("After Method");
 
 	}
