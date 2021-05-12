@@ -9,8 +9,34 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-
+<build>
+        <!-- Source directory configuration -->
+        <sourceDirectory>src</sourceDirectory>
+        <plugins>
+            <!-- Following plugin executes the testng tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.14.1</version>
+                <configuration>
+                    <!-- Suite testng xml file to consider for test execution -->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>suites-test-testng.xml</suiteXmlFile> 
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+            <!-- Compiler plugin configures the java version to be usedfor compiling 
+                the code -->
+        </plugins>
+    </build>
 	<dependencies>
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>3.0.0-M5</version>
+			<type>maven-plugin</type>
+		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -36,6 +62,12 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.0.0</version>
 		</dependency>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
 
 	</dependencies>
+	
 </project>

@@ -2,10 +2,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
-  <parameter name="param" value="We are on right track"/>
     <classes>
-      <class name="demo.Dummy2"/>
-      <class name="demo.Dummy"/>
+     <!--  <class name="demo.Dummy2"/>
+      <class name="demo.Dummy"/>  -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

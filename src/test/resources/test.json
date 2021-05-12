@@ -1,0 +1,15 @@
+{
+	"data":[
+		{
+			"testcase": "Error msg verification",
+			"username": "test",
+			"password": "123"
+		},
+		{
+			"testcase": "Test pass msg verification",
+			"username": "test1",
+			"password": "123"
+		}
+		
+	]
+}

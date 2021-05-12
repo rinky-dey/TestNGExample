@@ -1,7 +1,6 @@
 package demo;
 
 import java.io.IOException;
-
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -10,7 +9,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import utils.DataReader;
+
 
 public class Dummy2 {
 	
@@ -26,6 +25,26 @@ public class Dummy2 {
 
 	}
 	
+//	@DataProvider(name = "td")
+//	public Object[][] getData() throws JsonIOException, JsonSyntaxException, FileNotFoundException{
+//		JsonElement jE = new JsonParser().parse(new FileReader("src/test/resources/test.json"));
+//		JsonElement jsetData = jE.getAsJsonObject().get("jsetData");
+//		List<TestJSON> testdata = new Gson().fromJson(jsetData, new TypeToken<List<TestJSON>>() {
+//		}.getType());
+//		System.out.println(testdata.size());
+//		Object[][] tdata = new Object[testdata.size()][];
+//		int index=0;
+//		for (Object[] e : tdata) {
+//			e[0] = testdata.get(index++);
+//		}
+//		
+//		return tdata;
+//	}
+	
+//	@Test(dataProvider = "td" , groups = {"now"})
+//	public void testJSONpara(TestJSON testJSON) {
+//		System.out.println(testJSON);
+//	}
 	
 	@Test(priority = 9 , groups = {"smoke"})
 	private void test6() {
@@ -40,16 +59,16 @@ public class Dummy2 {
 		System.out.println("Test 1 parameters :" +param);
 	}
 	
-	@DataProvider(name = "testdata")
-	public static Object[][] our_dataProvider() throws IOException{
-		return DataReader.dataExcelReader("DummySheet");
-		
-	}
+//	@DataProvider(name = "testdata")
+//	public static Object[][] our_dataProvider() throws IOException{
+//		return DataReader.dataExcelReader("DummySheet");
+//		
+//	}
 	
-	@Test(dataProvider = "testdata" , priority = 6 , groups = {"sanity" , "regression" , "suravi"})
-	public void parametrizedtest(String username , String password) {
-		System.out.println(username +" : "+password);
-	}
+//	@Test(dataProvider = "testdata" , priority = 6 , groups = {"sanity" , "regression" , "suravi"})
+//	public void parametrizedtest(String username , String password) {
+//		System.out.println(username +" : "+password);
+//	}
 	
 	
 	@DataProvider(name = "testdata2")
@@ -59,7 +78,7 @@ public class Dummy2 {
 	}
 	
 	@Test(dataProvider = "testdata2" , groups = {"regression"})
-	public void parametrizedtest2(String username , int slary) {
+	public void parametrizedtest2(String username , int slary , int a) {
 		System.out.println(username +" : "+slary);
 	}
 	
